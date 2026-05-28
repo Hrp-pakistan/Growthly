@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Growthly Digital Marketing Pvt Ltd</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-kiCpzzmJB6WM8vi2w9l9zrERfa6hCndgGS+xwbVg6JyNm6GHsryV6BDtsIStBHROQEM0uQ2ZfZqgSr2w+B6MeQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Inline styles for portfolio filter */
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+    .filters button {
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 20px;
+      background: var(--color-light-alt);
+      color: var(--color-primary);
+      cursor: pointer;
+      font-weight: 500;
+      transition: background var(--transition);
+    }
+    .filters button.active {
+      background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+      color: var(--color-white);
+    }
+    .portfolio-items {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+    .portfolio-item {
+      position: relative;
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      background: var(--glass-bg);
+      backdrop-filter: blur(var(--glass-blur));
+      padding: 1rem;
+    }
+    .portfolio-item h4 {
+      margin-top: 0.5rem;
+      color: var(--color-primary);
+      font-size: 1.1rem;
+    }
+    .portfolio-item span {
+      font-size: 0.8rem;
+      color: var(--color-text-muted);
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container nav-wrapper">
+      <div class="logo">Growthly</div>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#process">Process</a></li>
+          <li><a href="index.html#ai">AI Tools</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="index.html#packages">Packages</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger"><span></span><span></span><span></span></div>
+    </div>
+    <div class="mobile-menu">
+      <div class="close-btn"><i class="fas fa-times"></i></div>
+      <ul>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#process">Process</a></li>
+        <li><a href="index.html#ai">AI Tools</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="index.html#packages">Packages</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="cta-buttons">
+        <a href="index.html#packages" class="btn btn-primary">View Packages</a>
+        <a href="contact.html" class="btn btn-outline">Book Consultation</a>
+        <a href="https://wa.me/923194482187" class="btn btn-primary" target="_blank">WhatsApp Now</a>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Hero -->
+  <section class="section" style="padding-top: calc(var(--nav-height) + 2rem);">
+    <div class="container text-center">
+      <h1>Our Portfolio</h1>
+      <p>Explore our work across digital advertising, websites, branding and more. Use the filters to find what interests you.</p>
+    </div>
+  </section>
+
+  <!-- Filters -->
+  <section class="section" id="portfolio">
+    <div class="container">
+      <div class="filters">
+        <button class="active" data-filter="all">All</button>
+        <button data-filter="meta">Meta Ads</button>
+        <button data-filter="google">Google Ads</button>
+        <button data-filter="web">Websites</button>
+        <button data-filter="branding">Branding</button>
+        <button data-filter="ugc">UGC</button>
+        <button data-filter="video">Video Ads</button>
+        <button data-filter="social">Social Posts</button>
+      </div>
+      <div class="portfolio-items">
+        <!-- Example items; in real use these would be populated dynamically or via CMS -->
+        <div class="portfolio-item reveal" data-category="meta">
+          <i class="fab fa-facebook-f fa-2x" style="color: var(--color-secondary);"></i>
+          <h4>Meta Lead Generation</h4>
+          <span>Meta Ads</span>
+          <p>A campaign that generated 2,000 qualified leads for a local retailer.</p>
+        </div>
+        <div class="portfolio-item reveal" data-category="google">
+          <i class="fab fa-google fa-2x" style="color: var(--color-secondary);"></i>
+          <h4>E‑commerce PPC</h4>
+          <span>Google Ads</span>
+          <p>Optimised search and shopping ads that tripled ROI for a fashion brand.</p>
+        </div>
+        <div class="portfolio-item reveal" data-category="web">
+          <i class="fas fa-laptop-code fa-2x" style="color: var(--color-secondary);"></i>
+          <h4>Law Firm Website</h4>
+          <span>Websites</span>
+          <p>Responsive, SEO‑friendly website for a law firm based in Islamabad.</p>
+        </div>
+        <div class="portfolio-item reveal" data-category="branding">
+          <i class="fas fa-paint-brush fa-2x" style="color: var(--color-secondary);"></i>
+          <h4>Brand Identity Design</h4>
+          <span>Branding</span>
+          <p>Created a cohesive brand identity including logo, colours and stationery.</p>
+        </div>
+        <div class="portfolio-item reveal" data-category="ugc">
+          <i class="fas fa-users fa-2x" style="color: var(--color-secondary);"></i>
+          <h4>Customer Testimonials</h4>
+          <span>UGC</span>
+          <p>UGC series where real customers shared their experiences on camera.</p>
+        </div>
+        <div class="portfolio-item reveal" data-category="video">
+          <i class="fas fa-video fa-2x" style="color: var(--color-secondary);"></i>
+          <h4>Product Launch Video</h4>
+          <span>Video Ads</span>
+          <p>A high‑energy video ad that launched a new app to the market.</p>
+        </div>
+        <div class="portfolio-item reveal" data-category="social">
+          <i class="fas fa-image fa-2x" style="color: var(--color-secondary);"></i>
+          <h4>Social Media Carousel</h4>
+          <span>Social Posts</span>
+          <p>Eye‑catching carousel posts designed to boost engagement.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="index.html#services">Marketing</a></li>
+          <li><a href="index.html#services">Management</a></li>
+          <li><a href="index.html#services">Design</a></li>
+          <li><a href="index.html#services">Video & UGC</a></li>
+          <li><a href="index.html#services">Web Development</a></li>
+          <li><a href="index.html#services">SEO</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Packages</h4>
+        <ul>
+          <li><a href="packages.html">Video Ads</a></li>
+          <li><a href="packages.html">Google Ads</a></li>
+          <li><a href="packages.html">Website Traffic</a></li>
+          <li><a href="packages.html">Social Media Management</a></li>
+          <li><a href="packages.html">Web Development</a></li>
+          <li><a href="packages.html">UGC Video Ads</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Portfolio</h4>
+        <ul>
+          <li><a href="#portfolio">Meta Ads</a></li>
+          <li><a href="#portfolio">Google Ads</a></li>
+          <li><a href="#portfolio">Websites</a></li>
+          <li><a href="#portfolio">Branding</a></li>
+          <li><a href="#portfolio">UGC</a></li>
+          <li><a href="#portfolio">Video Ads</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms & Conditions</a></li>
+        </ul>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/growthlydigital" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/growthlydigital" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/growthlydigital" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://wa.me/923194482187" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="container" style="margin-top:2rem;text-align:center;font-size:0.85rem;">
+      &copy; 2026 Growthly Digital Marketing Pvt Ltd. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- Floating buttons and chat/generator popups -->
+  <div class="floating-chat"><i class="fas fa-comments"></i></div>
+  <div class="chatbox">
+    <div class="chatbox-header">AI Assistant<span class="close">&times;</span></div>
+    <div class="chatbox-body"></div>
+    <div class="chatbox-footer">
+      <input type="text" placeholder="Type your message...">
+      <button type="button">Send</button>
+    </div>
+  </div>
+  <div class="floating-generator" style="bottom:8rem;"><i class="fas fa-magic"></i></div>
+  <div class="generator-box">
+    <div class="generator-header">AI Ad Idea Generator<span class="close">&times;</span></div>
+    <div class="generator-body">
+      <form>
+        <label>Business Name<br><input type="text" name="business" required></label><br><br>
+        <label>Industry<br><input type="text" name="industry" required></label><br><br>
+        <label>Product/Service<br><input type="text" name="service" required></label><br><br>
+        <label>Target Audience<br><input type="text" name="audience" required></label><br><br>
+        <label>Budget (PKR)<br><input type="number" name="budget" required></label><br><br>
+        <label>Platform<br><select name="platform" required>
+          <option value="Meta Ads">Meta Ads</option>
+          <option value="Google Ads">Google Ads</option>
+          <option value="YouTube Ads">YouTube Ads</option>
+          <option value="TikTok Ads">TikTok Ads</option>
+        </select></label><br><br>
+        <label>Goal<br><input type="text" name="goal" placeholder="e.g., increase sales" required></label><br><br>
+        <label>Tone<br><input type="text" name="tone" placeholder="e.g., friendly" required></label><br><br>
+        <button type="submit" class="btn btn-primary" style="width:100%;">Generate Idea</button>
+      </form>
+      <div class="generator-results" style="margin-top:1rem;"></div>
+    </div>
+    <div class="generator-footer"></div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    // Filter portfolio items
+    const filterButtons = document.querySelectorAll('.filters button');
+    const items = document.querySelectorAll('.portfolio-item');
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.getAttribute('data-filter');
+        items.forEach(item => {
+          const category = item.getAttribute('data-category');
+          if (filter === 'all' || category === filter) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
